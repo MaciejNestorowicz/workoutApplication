@@ -1,0 +1,13 @@
+.detail-select{
+  with: 100px;
+  color: black;
+}
+
+.detail-select::placeholder{
+  color: black;
+}
+
+.mat-select-placeholder {
+  color:red !important;
+}
+

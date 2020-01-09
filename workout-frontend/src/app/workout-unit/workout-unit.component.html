@@ -1,0 +1,26 @@
+<p>workout-unit works!</p>
+<table mat-table [dataSource]="workoutUnits">
+
+  <ng-container matColumnDef="workoutUnitName">
+    <th mat-header-cell *matHeaderCellDef> Workout Unit Name </th>
+    <td mat-cell *matCellDef="let workoutUnit"> {{workoutUnit.workoutUnitName}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="workoutUnitDate">
+    <th mat-header-cell *matHeaderCellDef> Date </th>
+    <td mat-cell *matCellDef="let workoutUnit"> {{workoutUnit.workoutUnitDate}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef> Actions </th>
+    <td mat-cell *matCellDef="let element" class="action-link">
+    <button mat-button (click)="clickOpenButton(element)">Open</button>
+    <button mat-button (click)="clickDeleteButton(element)">Delete</button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="workoutUnitTableColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: workoutUnitTableColumns;"></tr>
+</table>
+
+<button mat-button (click)="clickAddButton()">Add Workout-Unit</button>

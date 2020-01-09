@@ -1,0 +1,22 @@
+<h2>Exercise Details</h2>
+<form [formGroup]="editFormExercise" (ngSubmit)="onSubmit(editFormExercise.value)">
+
+  <div>
+    <label for="name">
+      Name :
+    </label>
+    <mat-form-field>
+      <input matInput id="name" type="text" formControlName="name">
+    </mat-form-field>
+  </div>
+  <div>
+    <label for="type">
+      Type :
+    </label>
+    <mat-form-field>
+      <input matInput id="type" type="text" formControlName="type">
+    </mat-form-field>
+  </div>
+  <button mat-button type="submit">Save</button>
+
+</form>
